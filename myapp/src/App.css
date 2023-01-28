@@ -1,0 +1,133 @@
+.App {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+/* navbar */
+.navbar {
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.navbar h1 {
+  color: #cc0000;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links li {
+  margin: 0 8px;
+  list-style: none;
+}
+
+.bodysec {
+  padding: 16px 40px;
+}
+
+.blog-tile {
+  width: calc(30%);
+  padding: 20px;
+  background-color: #fefefe;
+  border: 1px solid #000;
+}
+
+.tileouter {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.bdaycard {
+  background-color: #f36dd6;
+  padding: 40px 0;
+}
+
+.bdaycard-outer {
+  border-radius: 5px;
+  padding: 16px;
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: #fefefe;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bdaycard-outer h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.bdaytile-outer {
+  margin: 16px 0;
+}
+
+.bdaycard-tile {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.bdaycard-tile img {
+  width: 50px;
+}
+
+.bdaycard-tile h3,
+p {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.bdaycard-tile div {
+  margin-left: 8px;
+}
+
+.bdaycard-outer button {
+  width: 100%;
+  border: none;
+  background-color: #f36dd6;
+  color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
