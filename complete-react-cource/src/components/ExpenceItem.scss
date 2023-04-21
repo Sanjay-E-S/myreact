@@ -1,0 +1,29 @@
+.expenceitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: black;
+    background-color: #464040;
+    border-radius: 10px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.expenceitem__date {
+    font-size: 20px;
+}
+
+.expenceitem__title {
+    font-size: 22px;
+}
+
+.expenceitem__rate {
+    padding: 10px 20px;
+    background-color: red;
+    font-size: 18 px;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}

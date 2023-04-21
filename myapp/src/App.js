@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-// import Navbar from './Navbar';
-// import Bodysec from './Bodysec';
+import Navbar from './Navbar';
+import Bodysec from './Bodysec';
 import Bdaycard from './Bdaycard';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <div className='content'>
-        {/* <Navbar />
-        <Bodysec /> */}
+        {/* <Navbar /> */}
+        {/* <Bodysec /> */}
         <Bdaycard />
       </div>
       {/* <header className="App-header">
