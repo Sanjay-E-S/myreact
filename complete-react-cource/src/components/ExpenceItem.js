@@ -10,7 +10,6 @@ const ExpenceItem = (props) => {
     // let title = props.title;
 
     const clickHandler = () => {
-        console.log('hiiii');
         setTitle('updated')
     }
     return (

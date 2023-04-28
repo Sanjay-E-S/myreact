@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import './components/ExpenceItem';
 import Expences from './components/Expences';
+import NewExpence from './components/NewExpence';
 
 function App() {
   const Expence = [
@@ -20,6 +21,7 @@ function App() {
 
   return React.createElement('div', {},
     React.createElement('h2', {}, "Expences"),
+    React.createElement(NewExpence),
     React.createElement(Expences, { items: Expence })
   );
 }

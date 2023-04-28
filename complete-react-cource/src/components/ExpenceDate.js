@@ -1,4 +1,5 @@
 import React from "react";
+import "../components/ExpenceItem.scss";
 
 const ExpenceDate = (props) => {
     const month = props.date.toLocaleString('en-US', { month: 'long' });
@@ -6,7 +7,7 @@ const ExpenceDate = (props) => {
     const year = props.date.getFullYear();
 
     return (
-        <div>
+        <div className="date">
             <div>{month}</div>
             <div>{year}</div>
             <div>{day}</div>

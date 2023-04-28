@@ -7,7 +7,7 @@
     background-color: #464040;
     border-radius: 10px;
     color: #fff;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .expenceitem__date {
@@ -26,4 +26,11 @@
     color: white;
     border-radius: 10px;
     border: 1px solid #fff;
+}
+
+// 
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

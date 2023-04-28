@@ -1,10 +1,9 @@
 import React from "react";
 import ExpenceItem from "./ExpenceItem";
-import Card from "./Card";
 
 const Expences = (props) => {
     return (
-        <Card>
+        <div className="cardouter">
             <ExpenceItem
                 title={props.items[0].title}
                 date={props.items[0].date}
@@ -25,7 +24,7 @@ const Expences = (props) => {
                 date={props.items[3].date}
                 rate={props.items[3].rate}
             ></ExpenceItem>
-        </Card >
+        </div >
     );
 }
 
