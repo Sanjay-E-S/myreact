@@ -12,18 +12,24 @@ function App() {
     { id: 'e4', date: new Date(2021, 5, 12), title: 'ten', rate: '400$' }
   ];
 
-  // return (
-  //   <div>
-  //     <h2>Expences</h2>
-  //     <Expences items={Expence} />
-  //   </div>
-  // )
+  const addExpenceHandler = (Expence) => {
+    console.log('in app.js');
+    console.log(Expence);
+  }
 
-  return React.createElement('div', {},
-    React.createElement('h2', {}, "Expences"),
-    React.createElement(NewExpence),
-    React.createElement(Expences, { items: Expence })
-  );
+  return (
+    <div>
+      <h2>Expences</h2>
+      <NewExpence onAddExpence={addExpenceHandler} />
+      <Expences items={Expence} />
+    </div>
+  )
+
+  // return React.createElement('div', {},
+  //   React.createElement('h2', {}, "Expences"),
+  //   React.createElement(NewExpence),
+  //   React.createElement(Expences, { items: Expence })
+  // );
 }
 
 export default App;

@@ -1,9 +1,11 @@
 import React from "react";
 import ExpenceItem from "./ExpenceItem";
+import ExpensesFilter from "./ExpenceFilter";
 
 const Expences = (props) => {
     return (
         <div className="cardouter">
+            <ExpensesFilter />
             <ExpenceItem
                 title={props.items[0].title}
                 date={props.items[0].date}

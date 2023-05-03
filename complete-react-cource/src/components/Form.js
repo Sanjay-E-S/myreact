@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../components/Form.scss';
 
-const Form = () => {
+const Form = (props) => {
     const [enteredTitle, setTitle] = useState('');
     const [enteredDate, setDate] = useState('');
     const [enteredAmount, setAmount] = useState('');
@@ -41,7 +41,8 @@ const Form = () => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        console.log(enteredData);
+        // console.log(enteredData);
+        props.onSaveExpenceData(enteredData);
         setAmount('');
         setTitle('');
         setDate('');
