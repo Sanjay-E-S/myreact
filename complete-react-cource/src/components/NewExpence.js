@@ -8,7 +8,6 @@ const NewExpence = (props) => {
             id: Math.random().toString()
         }
         props.onAddExpence(enteredData);
-        // console.log(enteredData);
     }
     return (
         <Form onSaveExpenceData={saveExpencedata} />

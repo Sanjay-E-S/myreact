@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import './components/ExpenceItem';
 import Expences from './components/Expences';
 import NewExpence from './components/NewExpence';
 
-const prev_Expence = [
+const Dummy_Expence = [
   { id: 'e1', date: new Date(2021, 5, 12), title: 'pen', rate: '100$' },
   { id: 'e2', date: new Date(2021, 5, 12), title: 'hen', rate: '200$' },
   { id: 'e3', date: new Date(2021, 5, 12), title: 'ben', rate: '300$' },
@@ -12,21 +12,19 @@ const prev_Expence = [
 ];
 function App() {
 
-  const [Expence, setExpence] = useState(prev_Expence);
-
+  const [ExpenceList, setExpence] = useState(Dummy_Expence);
   const addExpenceHandler = (Expence) => {
-    console.log('in app.js');
     // console.log(Expence);
-    setExpence((Expence) => {
-      return [Expence, ...Expence];
+    setExpence((PrevExpence) => {
+      return [Expence, ...PrevExpence];
     });
-  }
-
+  };
+  console.log(ExpenceList);
   return (
     <div>
       <h2>Expences</h2>
       <NewExpence onAddExpence={addExpenceHandler} />
-      <Expences items={Expence} />
+      <Expences items={ExpenceList} />
     </div>
   )
 

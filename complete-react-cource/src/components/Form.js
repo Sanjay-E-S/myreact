@@ -12,36 +12,35 @@ const Form = (props) => {
     //     enteredAmount: '',
     // });
 
-    const titleHandler = (e) => {
-        // setUserInput({
-        //     ...userinput,
-        //     enteredTitle: e.target.value,
-        // });
-        setTitle(e.target.value);
-    }
-    const dateHandler = (e) => {
-        // setUserInput({
-        //     ...userinput,
-        //     enteredDate: e.target.value,
-        // });
-        setDate(e.target.value);
-    }
-    const amountHandler = (e) => {
-        // setUserInput({
-        //     ...userinput,
-        //     enteredAmount: e.target.value,
-        // });
-        setAmount(e.target.value);
-    }
+    // const titleHandler = (e) => {
+    //     // setUserInput({
+    //     //     ...userinput,
+    //     //     enteredTitle: e.target.value,
+    //     // });
+    //     setTitle(e.target.value);
+    // }
+    // const dateHandler = (e) => {
+    //     // setUserInput({
+    //     //     ...userinput,
+    //     //     enteredDate: e.target.value,
+    //     // });
+    //     setDate(e.target.value);
+    // }
+    // const amountHandler = (e) => {
+    //     // setUserInput({
+    //     //     ...userinput,
+    //     //     enteredAmount: e.target.value,
+    //     // });
+    //     setAmount(e.target.value);
+    // }
 
     const submitHandler = (e) => {
         e.preventDefault();
         const enteredData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            rate: enteredAmount + '$',
             date: new Date(enteredDate)
         };
-        // console.log(enteredData);
         props.onSaveExpenceData(enteredData);
         setAmount('');
         setTitle('');
@@ -53,15 +52,15 @@ const Form = (props) => {
             <form onSubmit={submitHandler} >
                 <div className='formitem'>
                     <label>Date</label>
-                    <input className="forminput" value={enteredDate} type="date" min={'2023-01-01'} max={'2023-12-31'} onChange={dateHandler}></input>
+                    <input className="forminput" value={enteredDate} type="date" min={'2023-01-01'} max={'2023-12-31'} onChange={(e) => setDate(e.target.value)}></input>
                 </div>
                 <div className='formitem'>
                     <label>Title</label>
-                    <input className="forminput" value={enteredTitle} type="text" onChange={titleHandler}></input>
+                    <input className="forminput" value={enteredTitle} type="text" onChange={(e) => setTitle(e.target.value)} />
                 </div>
                 <div className='formitem'>
                     <label>Amount</label>
-                    <input className="forminput" value={enteredAmount} type="text" onChange={amountHandler}></input>
+                    <input className="forminput" value={enteredAmount} type="text" onChange={(e) => setAmount(e.target.value)}></input>
                 </div>
                 <button type='submit' className='submitbtn'>Submit</button>
             </form>
