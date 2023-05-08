@@ -52,7 +52,7 @@ const Form = (props) => {
             <form onSubmit={submitHandler} >
                 <div className='formitem'>
                     <label>Date</label>
-                    <input className="forminput" value={enteredDate} type="date" min={'2023-01-01'} max={'2023-12-31'} onChange={(e) => setDate(e.target.value)}></input>
+                    <input className="forminput" value={enteredDate} type="date" min={'2019-01-01'} max={'2023-12-31'} onChange={(e) => setDate(e.target.value)}></input>
                 </div>
                 <div className='formitem'>
                     <label>Title</label>
