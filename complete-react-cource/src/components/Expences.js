@@ -14,7 +14,8 @@ const Expences = (props) => {
     return (
         <div className="cardouter">
             <ExpensesFilter selected={filterYear} onChangeFilter={filterChangeHandler} />
-            {filteredExpence.map((Expence, index) => (<ExpenceItem key={index} title={Expence.title} date={Expence.date} rate={Expence.rate} />))}
+            {filteredExpence.length === 0 ? (<p className="card">No Expence Found</p>) : filteredExpence.map((Expence, index) => (<ExpenceItem key={index} title={Expence.title} date={Expence.date} rate={Expence.rate} />))}
+            {/* {filteredExpence.map((Expence, index) => (<ExpenceItem key={index} title={Expence.title} date={Expence.date} rate={Expence.rate} />))} */}
             {/* <ExpenceItem
                 title={props.items[0].title}
                 date={props.items[0].date}

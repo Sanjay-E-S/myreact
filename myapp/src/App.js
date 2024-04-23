@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './Navbar';
 import Bodysec from './Bodysec';
 import Bdaycard from './Bdaycard';
+import Button from './components/Button';
 
 function App() {
   const title = 'hi react';
@@ -12,7 +13,8 @@ function App() {
       <div className='content'>
         {/* <Navbar /> */}
         {/* <Bodysec /> */}
-        <Bdaycard />
+        {/* <Bdaycard /> */}
+        <Button />
       </div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
